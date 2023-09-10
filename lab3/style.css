@@ -1,0 +1,31 @@
+main {
+    margin-top: auto;
+    padding-bottom: 55px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    background: #ffd666;
+}
+
+footer {
+    height: 35px;
+    width: 100%;
+}
+body {
+    height: 100%;
+}
+
+.text{
+    font-family: "JetBrains Mono", serif;
+}
+
+.tree-node {
+    border: 1px solid #000;
+    border-radius: 90%;
+    margin: auto;
+    padding: 15px;
+    color: #fff;
+    background-color: #000000;
+}
