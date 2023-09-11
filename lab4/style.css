@@ -3,6 +3,10 @@
     color: #714646;
 }
 
+head{
+    position: static;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -36,6 +40,16 @@ footer {
 
 .navbar-brand{
     color: white;
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.navbar-nav {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 * {

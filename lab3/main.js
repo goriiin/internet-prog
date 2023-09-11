@@ -6,6 +6,7 @@ const drawTree = (node, tabs) => {
         const text = "-&nbsp".repeat(tabs) + node.tagName; // Генерируем текст с отступами
         console.log(text); // Выводим текст в консоль
         const p = document.createElement("p"); // Создаем элемент <p>
+
         p.innerHTML = text; // Добавляем текст внутрь элемента <p>
 
         // Установка класса "tree-node" для элемента <p>
