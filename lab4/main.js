@@ -38,6 +38,11 @@ function addToTable(){
     table.innerHTML = '';
     tableFoot.innerHTML = '';
 
+    total = 0;
+
+    // Обновляем общую стоимость
+    document.querySelector('.price a').innerText = total;
+
     if (data.length != 0) {
         row = document.createElement("tr");
 
@@ -50,7 +55,6 @@ function addToTable(){
 
         tableHead.appendChild(row);
 
-        total = 0;
         for (const i of data) {
             const row = document.createElement("tr");
             total += i.price * i.count;
