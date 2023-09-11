@@ -29,16 +29,6 @@ for(let i=0; i < buttons.length; i++){
     });
 }
 
-
-// <tr>
-//     <th>Порядковый номер</th>
-//     <th>Название</th>
-//     <th>Цена</th>
-//     <th>Количество</th>
-//     <th></th>
-//     <th>Общая цена</th>
-// </tr>
-
 function addToTable(){
     let tableHead = document.querySelector('#productsTable thead');
     let table = document.querySelector('#productsTable tbody');
