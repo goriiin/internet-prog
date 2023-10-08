@@ -74,7 +74,7 @@ function addToTable(){
 
         row = document.createElement("tr");
 
-        row.innerHTML = `<td>Общая сумма</td> <td>${total} </td>`
+        row.innerHTML = `<td >Общая сумма</td> <td>${total}  <td> <button type="button" onclick="buy()">Купить</button></td></td>`
 
         tableFoot.appendChild(row);
     }
@@ -103,3 +103,19 @@ function minus(title){
     }
 }
 
+function buy(){
+    let tableHead = document.querySelector('#productsTable thead');
+    let table = document.querySelector('#productsTable tbody');
+    let tableFoot = document.querySelector('#productsTable tfoot');
+
+    tableHead.innerHTML = '';
+    table.innerHTML = '';
+    tableFoot.innerHTML = '';
+
+    alert(`Успешная покупка на ${total} рублей`)
+    data = []
+    total = 0;
+    document.querySelector('.price a').innerText = total;
+}
+
+console.log("12" * "2")
