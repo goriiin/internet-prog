@@ -1,26 +1,19 @@
 # frozen_string_literal: true
 
 # MyFunc2
-class MyFunc
-  def initialize
-    @temp_per_days = []
-    @num = 0
+class MyFunc2
+  def initialize(temp_per_days = [])
+    @temp_per_days = temp_per_days
   end
 
-  def create_table(num)
-    @num = num
-    @num.times do |i|
-      n = gets.chomp.to_i
-      @temp_per_days << n
-    end
+  def add(temp)
+    @temp_per_days << temp
   end
 
-  def out_t
-    num = 1
-    @temp_per_days.find_all do |elem|
-      puts "#{num} - #{elem}" if elem <= -10
-      num += 1
-    end
+  def out
+    answer = []
+    @temp_per_days.each { |temp| answer << temp if temp <= -10 }
+    answer
   end
 end
 

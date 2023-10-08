@@ -117,5 +117,3 @@ function buy(){
     total = 0;
     document.querySelector('.price a').innerText = total;
 }
-
-console.log("12" * "2")

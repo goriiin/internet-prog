@@ -4,16 +4,17 @@ require 'minitest/autorun'
 require_relative 'my_func2'
 
 
-# Testing class
-class TestMyFunc < MiniTest::Test
+class MyFunc2Test < Minitest::Test
   def setup
-    @items =
-    @module = MyFunc2.new
+    @my_func = MyFunc2.new([5, 10, -15, -20, 0, -5, -10])
   end
 
-  def test_name1
-    @items.each do |x|
-      assert(@module.calc(x).nil?)
-    end
+  def test_add
+    @my_func.add(-10)
+    assert_equal [-15, -20, -10, -10], @my_func.out
+  end
+
+  def test_out
+    assert_equal [-15, -20, -10], @my_func.out
   end
 end

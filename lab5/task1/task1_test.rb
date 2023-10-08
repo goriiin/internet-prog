@@ -12,7 +12,7 @@ class TestMyFunc < MiniTest::Test
 
   def test_func
     @items.each do |x|
-      refute_nil @module.calc(x)
+      assert(@module.calc(x).finite?)
     end
   end
 end
