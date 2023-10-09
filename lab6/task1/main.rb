@@ -1,22 +1,16 @@
 # frozen_string_literal: true
 
-EPS1 = 10**(-3)
-EPS2 = 10**(-4)
+require_relative 'my_func1'
 
-def func ( x )
-  1.0/(x + ( x + 1 ))
-end
+EPS1 = 10**-3
+EPS2 = -0.001
 
-sum = 0.0
-# s = SUM_k=1_k=inf (1/(k * (k + 1)))
-i = 1
-loop do
-  sum += func(i)
-  if (func(i + 1) - func(i)).abs < EPS2
-    break
-  end
+#f1 = MyFunc1.new(EPS1)
+f2 = MyFunc1.new(EPS2)
 
-  i+=1
-end
+#puts f1.calc
+p f2.calc
 
-puts sum, i
+f2.eps = 0.01
+
+p f2.eps
