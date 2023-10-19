@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>рк 1</title>
+</head>
+<body>
+<p>
+    Кошенков Дмитрий Олегович ИУ6-34Б 13 Вариант
+</p>
+<p>
+    Дан массив чисел arr_t. Определить максимум массива и поместить на место первого отрицательного элемента или на минимальное если отрицательных нет.
+</p>
+
+<form name="test" method="post">
+    <label>
+        <input type="text" id="input">
+    </label>
+    <button type="button" id="btn" class="button"> Отправить </button>
+</form>
+
+<div id="out">
+
+</div>
+</body>
+<script>
+    const btn = document.getElementById("btn");
+    const out = document.getElementById('out')
+    btn.addEventListener('click', function (message){
+        out.innerHTML = '';
+        const input = document.getElementById('input');
+        const values = input.value;
+
+        const array = values.split(' ').map(item => parseInt(item));
+
+        array[findNegativeOrMin(array)] = array[findMax(array)]
+        const p = document.createElement("p");
+
+        const text = array.join(' ');
+
+        p.innerHTML = array.join(' ');
+        out.appendChild(p);
+    })
+
+    function findMax(array = []){
+        if (array.length === 0){
+            return -1;
+        }
+
+        let numMax = array[0]
+        let indexMax = 0;
+        for (let i = 0; i<array.length; ++i){
+            const n = array[i];
+            if (n > numMax){
+                numMax = n;
+                indexMax = i;
+            }
+        }
+        return indexMax;
+    }
+
+    function findNegativeOrMin(array = []){
+        if (array.length === 0){
+            return -1;
+        }
+
+        let numMin = array[0]
+        let indexMin = 0;
+
+
+
+        for (let i = 0; i < array.length; ++i){
+            const n = array[i];
+            if (n < 0){
+                indexMin = i;
+                break;
+            }
+
+            if (n < numMin){
+                numMin = n;
+                indexMin = i;
+            }
+        }
+        return indexMin;
+    }
+</script>
+</html>
