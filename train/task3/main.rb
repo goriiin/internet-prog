@@ -4,10 +4,8 @@ def filter_range(arr, starting, ending)
   arr.select { |item| item.between?(starting, ending) }
 end
 
-def calculate_arithmetic_mean(arr = [])
-  sum = 0
-
-  arr.each { |item| sum += item }
+def calculate_arithmetic_mean(arr)
+  sum = arr.reduce(:+)
   sum.to_f / arr.length
 end
 
@@ -20,6 +18,9 @@ end
 
 size = gets.to_i
 
-arr = size.times.map { gets.to_i }
+arr = Array.new(size) { gets.to_i }
 
-answer arr, 1, 5
+starting = gets.to_i
+ending = gets.to_i
+
+answer arr, starting, ending
