@@ -2,7 +2,7 @@
 
 
 def find(arr = [])
-  arr
+
 end
 
 def transform(arr)
