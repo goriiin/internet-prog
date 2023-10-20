@@ -23,6 +23,10 @@ size = gets.to_i
 arr = size.times.map { gets.chomp }
 =end
 
-my_set = Set.new(arr)
 
-p sort_strings my_set
+def answer(arr = [])
+  my_set = Set.new(arr) # set - множество уникальных элементов
+
+  sort_strings my_set
+end
+
