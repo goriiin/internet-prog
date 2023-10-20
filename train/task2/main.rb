@@ -2,21 +2,27 @@
 
 require 'set'
 
+
+# Сортировка по убыванию
+# [-str.length, str]
+# -str.length - показывает, что по убыванию длинны
+# str - а затем по алфавиту
 def sort_strings(arr)
-  arr.sort_by { |str| [-str.length, str] }
+  arr.to_a.sort_by { |str| [-str.length, str] }
 end
 
-=begin
+# ---- тест
+#=begin
 arr = ['я', 'не', 'люблю', 'Бауманку', ', но’', 'я',
        'люблю', 'семинары по ЯИП']
-=end
+#=end
 
+#----- Раскомментинь для пользовательского ввода -----
+=begin
 size = gets.to_i
 arr = size.times.map { gets.chomp }
+=end
 
-my_set = Set[]
-
-arr.each { |item| my_set << item}
-
+my_set = Set.new(arr)
 
 p sort_strings my_set
