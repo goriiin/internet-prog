@@ -1,0 +1,6 @@
+<h1>Введите число n</h1>
+<%= form_tag "/armstrong_numbers/calculate" do %>
+  <%= label_tag :n, "n:" %>
+  <%= text_field_tag :n %>
+  <%= submit_tag "Рассчитать" %>
+<% end %>
