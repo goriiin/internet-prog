@@ -8,21 +8,11 @@ class ArmstrongNumbersController < ApplicationController
 
     (10**(n-1)..(10**n)-1).each do |number|
       sum = 0
-      temp_number = number
-      while temp_number > 0
-        digit = temp_number % 10
-        sum += digit**n
-        temp_number /= 10
-      end
+      number.to_s.each_char { |digit| sum += digit.to_i**n }
       armstrong_numbers << number if sum == number
     end
 
     @armstrong_numbers = armstrong_numbers
     @count = armstrong_numbers.count
-
-    respond_to do |format|
-      format.html { render partial: "results" } # Обновленный код
-      format.js   # Добавленный код
-    end
   end
 end
