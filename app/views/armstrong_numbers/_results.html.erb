@@ -1,0 +1,22 @@
+<h1>Результаты</h1>
+<p>Числа Армстронга из <%= @count %> цифр:</p>
+<% if @armstrong_numbers.any? %>
+  <table>
+    <thead>
+    <tr>
+      <th>Порядковый номер</th>
+      <th>Число Армстронга</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @armstrong_numbers.each_with_index do |number, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= number %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Нет чисел Армстронга из <%= params[:n] %> цифр</p>
+<% end %>
