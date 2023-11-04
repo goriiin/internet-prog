@@ -1,0 +1,2 @@
+module ArmstrongNumbersHelper
+end
