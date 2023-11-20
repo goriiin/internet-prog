@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 # MyClass
-class Filee
+class MyFile
+  attr_accessor :work_path, :work_path
 
   def initialize
     @main_path = '/home/dmitry/Desktop/internet-prog/lab7/task1/input'
@@ -9,7 +10,7 @@ class Filee
 
     file = File.open(@work_path, 'w')
     file.close
-  end  
+  end
 
   def work(inp)
     input_in_file inp
@@ -34,7 +35,7 @@ class Filee
   def char_upper?(char)
     char.match?(/[A-Z]/)
   end
-  
+
   def input_in_file(input)
     file = File.new(@main_path, 'w+')
 
